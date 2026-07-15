@@ -13,7 +13,7 @@ const sortOptions = [
 const ProductListing: React.FC = () => {
   const { categoryName = "" } = useParams();
   const [sort, setSort] = useState("popular");
-  const [maxPrice, setMaxPrice] = useState(100);
+  const [maxPrice, setMaxPrice] = useState(1000);
   const [onlyDeals, setOnlyDeals] = useState(false);
 
   const allProducts = useMemo(() => getProductsByCategory(categoryName), [categoryName]);
